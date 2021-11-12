@@ -1,3 +1,9 @@
+# Project specific
+lib
+
+# Meshroom
+MeshroomCache
+
 # Created by https://www.toptal.com/developers/gitignore/api/linux,macos,python,windows,jupyternotebooks,visualstudiocode,intellij,notepadpp
 # Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,python,windows,jupyternotebooks,visualstudiocode,intellij,notepadpp
 
