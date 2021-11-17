@@ -25,13 +25,16 @@ class Meshroom:
         working_dir = os.path.abspath(working_dir)
         output_dir = os.path.abspath(output_dir)
 
-        self.mr_process = subprocess.Popen([
+        self.compute_process = subprocess.Popen([
             self.bin_path,
             "--input", image_folder,
             "-p", self.template_path,
             "--save", os.path.join(working_dir, project_name),
             "--output", output_dir
-        ])
+        ], shell=False, stdout=subprocess.PIPE)
+    
+    def get_log(self, line_limit: int = -1):
+        return self.compute_process.stdout.readline(line_limit)
 
 
 if __name__ == "__main__":
