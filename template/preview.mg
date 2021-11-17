@@ -4,14 +4,15 @@
         "releaseVersion": "2021.1.0",
         "fileVersion": "1.1",
         "nodesVersions": {
-            "StructureFromMotion": "2.0",
-            "FeatureMatching": "2.0",
             "Texturing": "5.0",
             "FeatureExtraction": "1.1",
             "CameraInit": "4.0",
+            "Publish": "1.2",
             "MeshFiltering": "3.0",
             "ImageMatching": "2.0",
-            "Meshing": "7.0"
+            "StructureFromMotion": "2.0",
+            "Meshing": "7.0",
+            "FeatureMatching": "2.0"
         }
     },
     "graph": {
@@ -376,6 +377,32 @@
                 "outputMaterial": "{cache}/{nodeType}/{uid0}/texturedMesh.mtl",
                 "outputTextures": "{cache}/{nodeType}/{uid0}/texture_*.{outputTextureFileTypeValue}"
             }
+        },
+        "Publish_1": {
+            "nodeType": "Publish",
+            "position": [
+                1600,
+                0
+            ],
+            "parallelization": {
+                "blockSize": 0,
+                "size": 3,
+                "split": 1
+            },
+            "uids": {
+                "0": "3a9754207401d3504d753579eec1a2043629b564"
+            },
+            "internalFolder": "{cache}/{nodeType}/{uid0}/",
+            "inputs": {
+                "inputFiles": [
+                    "{Texturing_1.outputMesh}",
+                    "{Texturing_1.outputTextures}",
+                    "{Texturing_1.outputMaterial}"
+                ],
+                "output": "",
+                "verboseLevel": "info"
+            },
+            "outputs": {}
         }
     }
 }
