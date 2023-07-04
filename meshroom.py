@@ -38,6 +38,11 @@ class Meshroom:
 
 
 if __name__ == "__main__":
+    from time import sleep
     log.basicConfig(level=log.DEBUG)
     mr = Meshroom()
     mr.generate_textured_mesh("/home/nathan/Pictures/MRMonstree", "dev/output", working_dir="dev/project")
+    print("Testing123")
+    while True:
+        log.debug(mr.get_log())
+        sleep(2)
